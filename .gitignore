@@ -28,3 +28,4 @@ env/
 .settings/
 eclipse/
 *.tar.gz
+/.metadata/
