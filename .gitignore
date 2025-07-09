@@ -26,3 +26,5 @@ env/
 .classpath
 .project
 .settings/
+eclipse/
+*.tar.gz
