@@ -21,3 +21,8 @@ Makefile
 **/cmake_generated.cmake
 build/
 env/
+
+# Eclipse files
+.classpath
+.project
+.settings/
