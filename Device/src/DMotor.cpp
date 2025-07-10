@@ -76,6 +76,6 @@ DMotor::~DMotor ()
 // 3333333333333333333333333333333333333333333333333333333333333333333333333
 
 void DMotor::update(){
-	getAddressSpaceLink()->setNullRotationalSpeed(rand(), OpcUa_Good);
+	getAddressSpaceLink()->setRotationalSpeed(rand(), OpcUa_Good);
 }
 }
