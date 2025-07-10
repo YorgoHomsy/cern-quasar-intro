@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration xmlns="http://cern.ch/quasar/Configuration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cern.ch/quasar/Configuration ../Configuration/Configuration.xsd ">
 
-	<Motor name="m1" identifier="1"></Motor>
-	<Motor name="m2" identifier="2"></Motor></configuration>
+	<Motor name="m1" identifier="1" refreshRate="1"></Motor>
+	<Motor name="m2" identifier="2" refreshRate="1.5"></Motor></configuration>

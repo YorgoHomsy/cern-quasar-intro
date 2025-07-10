@@ -77,6 +77,7 @@ DMotor::~DMotor ()
 // 3333333333333333333333333333333333333333333333333333333333333333333333333
 
 void DMotor::update(){
+	LOG(Log::INF) << "Motor ID = " << identifier();
 	getAddressSpaceLink()->setRotationalSpeed(rand(), OpcUa_Good);
 }
 }
