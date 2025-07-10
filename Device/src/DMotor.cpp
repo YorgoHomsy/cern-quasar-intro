@@ -56,6 +56,7 @@ DMotor::DMotor (
     /* fill up constructor initialization list here */
 {
     /* fill up constructor body here */
+	LOG(Log::INF) << "Motor ID = " << config.identifier();
 }
 
 /* sample dtr */
