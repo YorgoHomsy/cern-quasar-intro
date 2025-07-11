@@ -82,7 +82,7 @@ void DMotor::update(){
 	getAddressSpaceLink()->setRotationalSpeed(rand(), OpcUa_Good);
 
 	//from clients to the server
-	OpcUa_Double rotationalSetPoint = getAddressSpaceLink()->getRotationalSetPoint(rotationalSetPoint);;
+	OpcUa_Double rotationalSetPoint = getAddressSpaceLink()->getRotationalSetPoint();
 	LOG(Log::INF)<< "Update(), setpoint " << rotationalSetPoint;
 }
 }
