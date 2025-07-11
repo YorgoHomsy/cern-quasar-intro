@@ -78,6 +78,11 @@ DMotor::~DMotor ()
 
 void DMotor::update(){
 	LOG(Log::INF) << "Motor ID = " << identifier();
+	//from the server to the clients
 	getAddressSpaceLink()->setRotationalSpeed(rand(), OpcUa_Good);
+
+	//from clients to the server
+	OpcUa_Double rotationalSetPoint = getAddressSpaceLink()->getRotationalSetPoint(rotationalSetPoint);;
+	LOG(Log::INF)<< "Update(), setpoint" << rotationalSetPoint;
 }
 }
