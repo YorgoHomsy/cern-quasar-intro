@@ -29,6 +29,7 @@
 
 #include <DRoot.h>
 #include <DMotor.h>
+#include <DController.h>
 
 QuasarServer::QuasarServer() : BaseQuasarServer()
 {
@@ -50,8 +51,8 @@ void QuasarServer::mainLoop()
     {
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
 
-        for(Device::DMotor *motor : Device::DRoot::getInstance()->motors()){
-        	motor ->update();
+        for(Device::DController *controller : Device::DRoot::getInstance()->controllers()){
+        	controller ->update();
         }
     }
     printServerMsg(" Shutting down server");

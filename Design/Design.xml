@@ -19,7 +19,19 @@
   		dataType="OpcUa_Float" name="refreshRate" nullPolicy="nullAllowed"
   		addressSpaceWrite="forbidden">
   	</d:cachevariable>
+  	<d:hasobjects instantiateUsing="configuration" class="TemperatureProbe"></d:hasobjects>
+  	<d:hasobjects instantiateUsing="configuration" class="AirFlowProbe"></d:hasobjects>
+  </d:class>
+  <d:class name="Controller">
+  	<d:devicelogic></d:devicelogic>
+  	<d:hasobjects instantiateUsing="configuration" class="Motor"></d:hasobjects>
+  </d:class>
+  <d:class name="TemperatureProbe">
+  	<d:devicelogic></d:devicelogic>
+  </d:class>
+  <d:class name="AirFlowProbe">
+  	<d:devicelogic></d:devicelogic>
   </d:class>
   <d:root>
-  	<d:hasobjects instantiateUsing="configuration" class="Motor"></d:hasobjects></d:root>
+  	<d:hasobjects instantiateUsing="configuration" class="Controller"></d:hasobjects></d:root>
 </d:design>
