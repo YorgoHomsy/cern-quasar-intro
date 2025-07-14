@@ -66,6 +66,18 @@ DMotor::~DMotor ()
 
 /* delegates for cachevariables */
 
+/* Note: never directly call this function. */
+
+UaStatus DMotor::writeRotationalSetPoint ( const OpcUa_Double& v)
+{
+	if(v > 1000){
+		return OpcUa_BadOutOfRange;
+	}
+	if(v < 0){
+		return OpcUa_BadOutOfRange;
+	}
+    return OpcUa_Good;
+}
 
 
 /* delegators for methods */
