@@ -91,7 +91,7 @@ UaStatus DMotor::writeRotationalSetPoint ( const OpcUa_Double& v)
 void DMotor::update(){
 	LOG(Log::INF) << "Motor ID = " << identifier();
 	//from the server to the clients
-	getAddressSpaceLink()->setRotationalSpeed(rand(), OpcUa_Good);
+	getAddressSpaceLink()->setRotationalSpeed(500 + rand()%20, OpcUa_Good);
 
 	//from clients to the server
 	OpcUa_Double rotationalSetPoint = getAddressSpaceLink()->getRotationalSetPoint();
