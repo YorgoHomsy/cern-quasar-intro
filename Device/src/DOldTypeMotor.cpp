@@ -20,8 +20,8 @@
 
 #include <Configuration.hxx> // TODO; should go away, is already in Base class for ages
 
-#include <DMotor.h>
-#include <ASMotor.h>
+#include <DOldTypeMotor.h>
+#include <ASOldTypeMotor.h>
 
 namespace Device
 {
@@ -47,37 +47,24 @@ namespace Device
 // 2222222222222222222222222222222222222222222222222222222222222222222222222
 
 /* sample ctr */
-DMotor::DMotor (
-    const Configuration::Motor& config,
-    Parent_DMotor* parent
+DOldTypeMotor::DOldTypeMotor (
+    const Configuration::OldTypeMotor& config,
+    Parent_DOldTypeMotor* parent
 ):
-    Base_DMotor( config, parent)
+    Base_DOldTypeMotor( config, parent)
 
     /* fill up constructor initialization list here */
 {
     /* fill up constructor body here */
-	LOG(Log::INF) << "Motor ID = " << config.identifier();
 }
 
 /* sample dtr */
-DMotor::~DMotor ()
+DOldTypeMotor::~DOldTypeMotor ()
 {
 }
 
 /* delegates for cachevariables */
 
-/* Note: never directly call this function. */
-
-UaStatus DMotor::writeRotationalSetPoint ( const OpcUa_Double& v)
-{
-	if(v > 1000){
-		return OpcUa_BadOutOfRange;
-	}
-	if(v < 0){
-		return OpcUa_BadOutOfRange;
-	}
-    return OpcUa_Good;
-}
 
 
 /* delegators for methods */
@@ -88,15 +75,4 @@ UaStatus DMotor::writeRotationalSetPoint ( const OpcUa_Double& v)
 // 3     You can do whatever you want, but please be decent.               3
 // 3333333333333333333333333333333333333333333333333333333333333333333333333
 
-void DMotor::update(){
-	LOG(Log::INF) << "Motor ID = " << identifier();
-	//from the server to the clients
-	getAddressSpaceLink()->setRotationalSpeed(rand(), OpcUa_Good);
-
-	//from clients to the server
-	OpcUa_Double rotationalSetPoint = getAddressSpaceLink()->getRotationalSetPoint();
-	LOG(Log::INF)<< "Update(), setpoint " << rotationalSetPoint;
-
-
-}
 }
