@@ -2,13 +2,14 @@
 <configuration xmlns="http://cern.ch/quasar/Configuration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cern.ch/quasar/Configuration ../Configuration/Configuration.xsd ">
 
 	<CalculatedVariableGenericFormula name="calibratedRotationSpeed" formula="$thisObjectAddress.rotationalSpeed+$parentObjectAddress(numLevelsUp=1).RPM_Calibration_Offset"></CalculatedVariableGenericFormula>
-	<Controller name = "controller1">
+	<Controller name = "controller1" address="usb1">
 		<CalculatedVariable name="RPM_Calibration_Offset" value="-100"></CalculatedVariable>
-		<Motor name="m1" identifier="1" refreshRate="1">
+		<Motor name="m1" identifier="1" refreshRate="1000">
 			<CalculatedVariable name="calibratedRotationalSpeed" value="$applyGenericFormula(calibratedRotationSpeed)"></CalculatedVariable>
-		</Motor>
-		<Motor name="m2" identifier="2" refreshRate="1.5">
+			<AirFlowProbe name="af1"></AirFlowProbe></Motor>
+		<Motor name="m2" identifier="2" refreshRate="2000">
 			<CalculatedVariable name="calibratedRotationalSpeed" value="$applyGenericFormula(calibratedRotationSpeed)"></CalculatedVariable>
+			<AirFlowProbe name="af2"></AirFlowProbe>
 		</Motor>
 	</Controller></configuration>
 

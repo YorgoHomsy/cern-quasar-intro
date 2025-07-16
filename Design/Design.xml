@@ -14,17 +14,31 @@
   	</d:cachevariable>
   	<d:configentry dataType="OpcUa_UInt32" name="identifier"
   		storedInDeviceObject="true">
+  		<d:configRestriction>
+  			<d:restrictionByBounds minExclusive="0"
+  				maxExclusive="3" /></d:configRestriction>
   	</d:configentry>
   	<d:cachevariable initializeWith="configuration"
   		dataType="OpcUa_Float" name="refreshRate" nullPolicy="nullAllowed"
   		addressSpaceWrite="forbidden">
+  		<d:configRestriction>
+  			<d:restrictionByEnumeration>
+  				<d:enumerationValue value="1000"></d:enumerationValue>
+  				<d:enumerationValue value="2000"></d:enumerationValue></d:restrictionByEnumeration></d:configRestriction>
   	</d:cachevariable>
   	<d:hasobjects instantiateUsing="configuration" class="TemperatureProbe"></d:hasobjects>
-  	<d:hasobjects instantiateUsing="configuration" class="AirFlowProbe"></d:hasobjects>
+  	<d:hasobjects instantiateUsing="configuration"
+  		class="AirFlowProbe" maxOccurs="1" minOccurs="1">
+  	</d:hasobjects>
   </d:class>
   <d:class name="Controller">
   	<d:devicelogic></d:devicelogic>
-  	<d:hasobjects instantiateUsing="configuration" class="Motor"></d:hasobjects>
+  	<d:hasobjects instantiateUsing="configuration" class="Motor"
+  		maxOccurs="4" minOccurs="0">
+  	</d:hasobjects>
+  	<d:configentry dataType="UaString" name="address">
+  		<d:configRestriction>
+  			<d:restrictionByPattern pattern="usb[0-9]+" /></d:configRestriction></d:configentry>
   </d:class>
   <d:class name="TemperatureProbe">
   	<d:devicelogic></d:devicelogic>
