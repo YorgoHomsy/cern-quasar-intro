@@ -65,6 +65,8 @@ public:
     void update();
 
 private:
+    OpcUa_Double m_rotationalSpeed;
+
 
 
 
