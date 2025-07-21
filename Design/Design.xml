@@ -32,6 +32,10 @@
   	<d:hasobjects instantiateUsing="configuration"
   		class="AirFlowProbe" maxOccurs="1" minOccurs="1">
   	</d:hasobjects>
+  	<d:method addressSpaceCallUseMutex="no" name="turnOn"
+  		executionSynchronicity="synchronous">
+  		<d:argument dataType="OpcUa_Double" name="rotationalSetPoint"></d:argument>
+  	</d:method>
   	<d:documentation>This class covers motors of type A and B.</d:documentation>
   </d:class>
   <d:class name="Controller">

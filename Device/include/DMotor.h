@@ -47,6 +47,9 @@ public:
 
 
     /* delegators for methods */
+    UaStatus callTurnOn (
+        OpcUa_Double rotationalSetPoint
+    ) ;
 
 private:
     /* Delete copy constructor and assignment operator */

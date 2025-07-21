@@ -81,6 +81,12 @@ UaStatus DMotor::writeRotationalSetPoint ( const OpcUa_Double& v)
 
 
 /* delegators for methods */
+UaStatus DMotor::callTurnOn (
+    OpcUa_Double rotationalSetPoint
+)
+{
+    return OpcUa_BadNotImplemented;
+}
 
 // 3333333333333333333333333333333333333333333333333333333333333333333333333
 // 3     FULLY CUSTOM CODE STARTS HERE                                     3
