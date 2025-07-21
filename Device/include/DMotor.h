@@ -50,6 +50,10 @@ public:
     UaStatus callTurnOn (
         OpcUa_Double rotationalSetPoint
     ) ;
+    UaStatus callGetDiagnostics (
+        UaByteString& firmware,
+        UaString& serialNumber
+    ) ;
 
 private:
     /* Delete copy constructor and assignment operator */

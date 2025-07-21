@@ -36,6 +36,11 @@
   		executionSynchronicity="synchronous">
   		<d:argument dataType="OpcUa_Double" name="rotationalSetPoint"></d:argument>
   	</d:method>
+  	<d:method addressSpaceCallUseMutex="no" name="getDiagnostics"
+  		executionSynchronicity="synchronous">
+  		<d:returnvalue dataType="UaByteString" name="firmware"></d:returnvalue>
+  		<d:returnvalue dataType="UaString" name="serialNumber"></d:returnvalue>
+  	</d:method>
   	<d:documentation>This class covers motors of type A and B.</d:documentation>
   </d:class>
   <d:class name="Controller">

@@ -95,6 +95,16 @@ UaStatus DMotor::callTurnOn (
     return OpcUa_Good;
 }
 
+UaStatus DMotor::callGetDiagnostics (
+    UaByteString& firmware,
+    UaString& serialNumber
+)
+{
+	OpcUa_Byte firmwareAsBytes[] = {0x33, 0x44, 0x55};
+	firmware.setByteString(sizeof firmwareAsBytes, firmwareAsBytes);
+    serialNumber = "GFAJFEJJFFASD";
+	return OpcUa_Good;
+}
 // 3333333333333333333333333333333333333333333333333333333333333333333333333
 // 3     FULLY CUSTOM CODE STARTS HERE                                     3
 // 3     Below you put bodies for custom methods defined for this class.   3
