@@ -49,7 +49,7 @@ Invoking the method sets the `rotationalSetPoint` of a Motor.
 ### Step 3: Observe rotationalSpeed reaching set point
 The `rotationalSpeed` variable adjusts to match the `rotationalSetPoint` based on the internal update logic.
 
-![rotationalSpeed Result](assets/rotationalSpeed_result.png)
+![rotationalSpeed Result](assets/subscription_rotationalSpeep.png)
 
 ### Step 4: Drag & Drop Motor objects
 Interactively adding Motors (`m1`, `m2`) and their respective cache variables in UaExpert.
