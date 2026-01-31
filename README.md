@@ -39,7 +39,7 @@ The server consists of the following main classes:
 ### Step 1: Subscribe to rotationalSpeed variable in UaExpert
 This demonstrates how the server updates the read-only cache variable automatically when the set point changes.
 
-![Subscription](assets/subscription_rotationalSpeed.png)
+![Subscription](assets/subscription_rotationalSpeep.png)
 
 ### Step 2: Call the turnOn() method
 Invoking the method sets the `rotationalSetPoint` of a Motor.
