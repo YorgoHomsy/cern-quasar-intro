@@ -49,17 +49,20 @@ Invoking the method sets the `rotationalSetPoint` of a Motor.
 ### Step 3: Observe rotationalSpeed reaching set point
 The `rotationalSpeed` variable adjusts to match the `rotationalSetPoint` based on the internal update logic.
 
-![rotationalSpeed Result](assets/subscription_rotationalSpeep.png)
+![rotationalSpeed Result](assets/rotationalSpeed_result.png)
 
-### Step 4: Drag & Drop Motor objects
-Interactively adding Motors (`m1`, `m2`) and their respective cache variables in UaExpert.
 
-![Drag and Drop](assets/drag_drop.gif)
+### Live Interaction Demos
 
-### Step 5: TurnOn Demo in Action
-Demonstrates the real-time effect of the `turnOn()` method on the rotational speed of Motor objects.
+These GIFs show the **real-time interactions** that occur behind the core steps above.
 
-![turnOn Demo](assets/turnon_demo.gif)
+- **Drag & Drop Motors (`m1`, `m2`) and cache variables**  
+  Demonstrates how objects and variables can be interactively added in UaExpert.  
+  ![Drag and Drop](assets/drag_drop.gif)
+
+- **TurnOn() Method Demo**  
+  Shows how invoking `turnOn()` immediately updates the `rotationalSpeed` of Motor objects.  
+  ![TurnOn Demo](assets/turnon_demo.gif)
 
 ---
 
