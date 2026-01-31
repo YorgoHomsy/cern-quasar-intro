@@ -30,7 +30,7 @@ The server consists of the following main classes:
 > [!IMPORTANT]
 > Each Motor object must have exactly one AirflowProbe; otherwise, the server throws a runtime error during initialization.
 
-![Class Structure](class_structure.png)
+![Class Structure](assets/class_structure.png)
 
 ---
 
@@ -39,27 +39,27 @@ The server consists of the following main classes:
 ### Step 1: Subscribe to rotationalSpeed variable in UaExpert
 This demonstrates how the server updates the read-only cache variable automatically when the set point changes.
 
-![Subscription](subscription_rotationalSpeed.jpg)
+![Subscription](assets/subscription_rotationalSpeed.jpg)
 
 ### Step 2: Call the turnOn() method
 Invoking the method sets the `rotationalSetPoint` of a Motor.
 
-![turnOn Method](call_turnOn.png)
+![turnOn Method](assets/call_turnOn.png)
 
 ### Step 3: Observe rotationalSpeed reaching set point
 The `rotationalSpeed` variable adjusts to match the `rotationalSetPoint` based on the internal update logic.
 
-![rotationalSpeed Result](rotationalSpeed_result.png)
+![rotationalSpeed Result](assets/rotationalSpeed_result.png)
 
 ### Step 4: Drag & Drop Motor objects
 Interactively adding Motors (`m1`, `m2`) and their respective cache variables in UaExpert.
 
-![Drag and Drop](drag_drop.gif)
+![Drag and Drop](assets/drag_drop.gif)
 
 ### Step 5: TurnOn Demo in Action
 Demonstrates the real-time effect of the `turnOn()` method on the rotational speed of Motor objects.
 
-![turnOn Demo](turnon_demo.gif)
+![turnOn Demo](assets/turnon_demo.gif)
 
 ---
 
